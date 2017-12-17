@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "aria1-example1"
+    "name": "aria-example1"
   },
   "apps": [
     {
