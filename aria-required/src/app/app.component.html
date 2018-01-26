@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <h1>
+        Welcome to {{title}}!
+    </h1>
+    <div id="container">
+        <h2>Create Account</h2>
+        <div class="text">
+            <label for="first">First Name:</label>
+
+            <!-- onmouseover="tooltipMouse(this);" -->
+            <!-- onfocus="tooltipFocus(this);" -->
+
+            <input type="text" class="tooltip" id="first" name="first" size="20" aria-required="false" title="{{ foobar }}"
+                [(ngModel)]="firstName" name="firstName" (change)="checkEmpty()" (focusout)="clickOutside($event)" ngDefaultControl  (mouseover)="tooltipMouseover()" (mouseout)="tooltipMouseleave()" (focus)="tooltipFocus()" (blur)="tooltipBlur()"/>
+
+            <div *ngIf="isMouseOver" [(ngModel)]="toolTipAlert" id="tooltip" name="toolTipAlert" ngDefaultControl>Mouse is over the First Name entryfield.</div>
+            <div *ngIf="isInFocus" [(ngModel)]="toolTipAlert" id="tooltip" name="toolTipAlert" ngDefaultControl>First Name entryfield is in focus.</div>
+        </div>
+    </div>
+</div>
